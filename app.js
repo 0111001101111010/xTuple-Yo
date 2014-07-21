@@ -30,7 +30,7 @@ app.get('/', function (req, res){
   });
 });
 
-app.post('text', function( req, res){
+app.post('/text', function( req, res){
   res.send("hello!");
   res.end();
   //Send an SMS text message
