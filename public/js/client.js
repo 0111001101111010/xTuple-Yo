@@ -13,7 +13,9 @@ var text = function(number){
     type: 'POST',
   //  dataType: 'jsonp',
     url: 'http://localhost:3000/text',
-    data: {}
+    data: {
+      "number":number
+    }
   })
 
   .done(
