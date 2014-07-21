@@ -12,12 +12,16 @@ src="//static.twilio.com/libs/twiliojs/1.2/twilio.min.js"></script>
   </head>
   <body>
     <blink><h1>xTuple Push Notifications</h1></blink>
-
     <% for(var i = 0; i < contacts.length; i++) { %>
-      <p>Id: <%= contacts[i].number %>
-      <p>Name: <%= contacts[i].firstName + " " + contacts[i].lastName %>
-      <p>Phone: <%= contacts[i].phone %>
+    <div>
+      <p class="id">Id: <%= contacts[i].number %>
+      <p class="name">Name: <%= contacts[i].firstName + " " + contacts[i].lastName %>
+      <br>
+      <label for="phone">Phone:</label>
+      <p class="phone"><%= contacts[i].phone %>
+      <input type="button" value="notify" id="tap">
       <hr>
+    </div>
     <% } %>
   </body>
   <script src="js/client.js"></script>
