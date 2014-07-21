@@ -1,4 +1,5 @@
 $( "div" ).click(function() {
+  console.log("clicked now waiting");
   //alert( "Alerting:" );
   //console.log($(this).html());
   var number = $(this).find(".phone").text();
@@ -18,5 +19,6 @@ var text = function(number){
   .done(
     function (json) {
       console.log(json);
+      console.log('Response finished');
   });
 };
