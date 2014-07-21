@@ -5,8 +5,9 @@
   "keywords": "xtuple, rest, api, oauth2, jwt",
   "main": "app.js",
   "dependencies": {
-    "express": "4.6.x",
     "ejs": "1.0.x",
+    "express": "4.6.x",
+    "twilio": "^1.6.0",
     "xtuple-rest-client": "0.0.x"
   },
   "devDependencies": {},
