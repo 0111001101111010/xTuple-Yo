@@ -2,12 +2,14 @@ var express = require('express'),
   app = express(),
   path = require('path'),
   http = require('http'),
-  Client = require('xtuple-rest-client');
+  Client = require('xtuple-rest-client'),
+  twilio = require('twilio')('ACCOUNT_SID', 'AUTH_TOKEN');
 
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');
 app.locals.title = "xTuple REST To Do App";
 app.set("views", path.join( __dirname, "views" ));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function (req, res){
   new Client(function (client) {
