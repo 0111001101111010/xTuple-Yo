@@ -3,14 +3,16 @@ var express = require('express'),
   path = require('path'),
   http = require('http'),
   Client = require('xtuple-rest-client'),
-  twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
-
+  twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN),
+  bodyParser = require('body-parser');
 
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');
 app.locals.title = "xTuple REST To Do App";
 app.set("views", path.join( __dirname, "views" ));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded());
+
 
 app.get('/', function (req, res){
   new Client(function (client) {
@@ -33,10 +35,12 @@ app.get('/', function (req, res){
 
 app.post('/text', function( req, res){
   //Send an SMS text message
-  
+  console.log(req.body.number);
+  var number = req.body.number;
+
   twilio.sendMessage({
 
-      to:'+13473993732', // Any number Twilio can deliver to
+      to: number, // Any number Twilio can deliver to
       from: '+13476479140', // A number you bought from Twilio and can use for outbound communication
       body: 'Please Move Your Car'
   }, function(err, responseData) {
