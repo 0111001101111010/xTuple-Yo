@@ -12,7 +12,7 @@ app.set("views", path.join( __dirname, "views" ));
 app.get('/', function (req, res){
   new Client(function (client) {
     client.query({
-      type: 'ToDo',
+      type: 'Contact',
       method: 'list',
       params: { maxResults: 50 },
       callback: function (err, result) {
@@ -20,8 +20,8 @@ app.get('/', function (req, res){
           res.send('Error:', err);
         }
         if (result) {
-          app.locals.todos = result.data.data;
-          res.render("index");
+          app.locals.contacts = result.data.data;
+          res.render("contact");
         }
       }
     });

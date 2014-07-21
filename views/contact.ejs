@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/public/stylesheets/styles.css">
+    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <blink><h1>xTuple Push Notifications</h1></blink>
+
+    <% for(var i = 0; i < contacts.length; i++) { %>
+      <p>Id: <%= contacts[i].number %>
+      <p>Name: <%= contacts[i].firstName + " " + contacts[i].lastName %>
+      <p>Phone: <%= contacts[i].phone %>
+      <hr>
+    <% } %>
+
+  </body>
+</html>
