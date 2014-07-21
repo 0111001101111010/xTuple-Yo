@@ -3,7 +3,8 @@ var express = require('express'),
   path = require('path'),
   http = require('http'),
   Client = require('xtuple-rest-client'),
-  twilio = require('twilio')('ACCOUNT_SID', 'AUTH_TOKEN');
+  twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+
 
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');
@@ -31,22 +32,18 @@ app.get('/', function (req, res){
 });
 
 app.post('/text', function( req, res){
-  res.send("hello!");
-  res.end();
   //Send an SMS text message
-  client.sendMessage({
+  twilio.sendMessage({
 
-      to:'+13476479140', // Any number Twilio can deliver to
-      from: '+14506667788', // A number you bought from Twilio and can use for outbound communication
-      body: 'word to your mother.' // body of the SMS message
-
-  }, function(err, responseData) { //this function is executed when a response is received from Twilio
-      if (!err) { // "err" is an error received during the request, if any
-          // "responseData" is a JavaScript object containing data received from Twilio.
-          // A sample response from sending an SMS message is here (click "JSON" to see how the data appears in JavaScript):
-          // http://www.twilio.com/docs/api/rest/sending-sms#example-1
-          console.log(responseData.from); // outputs "+14506667788"
-          console.log(responseData.body); // outputs "word to your mother."
+      to:'+13473993732', // Any number Twilio can deliver to
+      from: '+13476479140', // A number you bought from Twilio and can use for outbound communication
+      body: 'Please Move Your Car'
+  }, function(err, responseData) {
+      console.log(err);
+      if (!err) {
+      console.log(responseData);
+      res.send(responseData.from + " " + responseData.body);
+      res.end();
       }
   });
 });
