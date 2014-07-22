@@ -15,12 +15,14 @@ src="//static.twilio.com/libs/twiliojs/1.2/twilio.min.js"></script>
     <blink><h1>xTuple Move-Your-Car</h1></blink>
   <div class="pure-g">
     <% for(var i = 0; i < contacts.length; i++) { %>
-    <div class="pure-u-1 orange" id="tap">
-      <p class="name"><%= contacts[i].firstName + " " + contacts[i].lastName %>
-      <br>
-      <p class="phone"><%= contacts[i].phone %></p>
-      <hr>
-    </div>
+      <% if(contacts[i].phone !== null) {%>
+      <div class="pure-u-1 orange" id="tap">
+        <p class="name"><%= contacts[i].firstName + " " + contacts[i].lastName %>
+        <br>
+        <p class="phone"><%= contacts[i].phone %></p>
+        <hr>
+      </div>
+      <% } %>
     <% } %>
   </div>
   </body>
