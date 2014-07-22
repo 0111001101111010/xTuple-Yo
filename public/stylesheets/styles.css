@@ -5,9 +5,11 @@ p {
   font-family: "'Montserrat', arial, sans-serif"
   font-size: 2em;
   text-align: center;
+  text-transform: uppercase;
 }
 .phone {
   font-size: 3em;
+  text-transform: uppercase;
 }
 .name {
   font-size: 2em;
@@ -25,6 +27,7 @@ p {
   background: #9B59B6;
   font-size: 3em;
   color: white;
+  text-transform: capitalize;
   font-family: "'Montserrat', arial, sans-serif"
 }
 
