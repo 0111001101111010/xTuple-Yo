@@ -2,6 +2,7 @@ xTuple-Yo!
 ====
 Node Application to work with [xTuple REST services.](http://github.com/xtuple/xtuple)
 
+![Imgur](http://i.imgur.com/LQVwt7d.png)
 Intro
 ---
 Text contacts in xTuple to please move their cars. Small express application that talks to multiple services.
