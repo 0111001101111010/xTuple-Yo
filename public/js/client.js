@@ -1,9 +1,15 @@
 $( "div" ).click(function() {
   console.log("clicked now waiting");
-  //alert( "Alerting:" );
-  //console.log($(this).html());
+  var self = this;
   var number = $(this).find(".phone").text();
   text(number);
+  console.log(number);
+  console.log($(this));
+  $(this).addClass('shake shake-horizontal"');
+  setTimeout(function(){
+    $(self).removeClass('shake shake-horizontal"');
+  },1000);
+
 });
 
 

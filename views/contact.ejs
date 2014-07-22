@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/csshake.min.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
     <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
@@ -12,8 +13,8 @@ src="//static.twilio.com/libs/twiliojs/1.2/twilio.min.js"></script>
  -->    <title><%= title %></title>
   </head>
   <body>
-  <div class="pure-g">
-    <div class="pure-u-1" id="title"><p>xTuple-Yo!</p></div>
+  <span class="pure-g">
+    <span class="pure-u-1" id="title"><p>xTuple-Yo!</p></span>
     <% for(var i = 0; i < contacts.length; i++) { %>
       <% if((contacts[i].phone !== null) && (contacts[i].firstName !== 'null') && (contacts[i].lastName !== null)) {%>
         <% if(i%2!==0) {%>
@@ -26,7 +27,7 @@ src="//static.twilio.com/libs/twiliojs/1.2/twilio.min.js"></script>
       </div>
       <% } %>
     <% } %>
-  </div>
+  </span>
   </body>
   <script src="js/client.js"></script>
 </html>

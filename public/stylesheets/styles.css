@@ -1,3 +1,6 @@
+body {
+  background: #f98530;
+}
 p {
   font-family: "'Montserrat', arial, sans-serif"
   font-size: 2em;
@@ -23,4 +26,8 @@ p {
   font-size: 3em;
   color: white;
   font-family: "'Montserrat', arial, sans-serif"
+}
+
+.click {
+  font-size: 3em;
 }
