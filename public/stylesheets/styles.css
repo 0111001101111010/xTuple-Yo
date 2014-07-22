@@ -1,4 +1,5 @@
 p {
+  font-family: "'Montserrat', arial, sans-serif"
   font-size: 2em;
   margin: 0 auto;
   text-align: center;
@@ -15,4 +16,10 @@ p {
 
   background: blue;
   color: white;
+}
+#title{
+  background: #9B59B6;
+  font-size: 3em;
+  color: white;
+  font-family: "'Montserrat', arial, sans-serif"
 }

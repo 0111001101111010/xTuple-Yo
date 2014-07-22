@@ -12,8 +12,8 @@ src="//static.twilio.com/libs/twiliojs/1.2/twilio.min.js"></script>
  -->    <title><%= title %></title>
   </head>
   <body>
-    <blink><h1>xTuple Move-Your-Car</h1></blink>
   <div class="pure-g">
+    <div class="pure-u-1" id="title"><p>xTuple Move-Your-Car</p></div>
     <% for(var i = 0; i < contacts.length; i++) { %>
       <% if(contacts[i].phone !== null) {%>
       <div class="pure-u-1 orange" id="tap">
