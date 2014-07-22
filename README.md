@@ -1,9 +1,19 @@
-## xTuple Node ToDo Example Application
-
+xTuple-Yo!
+====
 Node Application to work with [xTuple REST services.](http://github.com/xtuple/xtuple)
 
-## How to Get Started:
+Intro
+---
+Text contacts in xTuple to please move their cars. Small express application that talks to multiple services.
 
+*NOTE: Must point in the environment variables to a live xTuple server properly authorized
+*NOTE: Must have an established Twilio Account
+
+All configs gon in .env, and format can be found in 'sample.env'
+
+
+Setup xTuple
+====
 ### Create new OAuth2 Client
 
 Before you can use this client with xTuple's OAuth 2.0 Server,
