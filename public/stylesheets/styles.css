@@ -1,8 +1,18 @@
+p {
+  font-size: 2em;
+  margin: 0 auto;
+  text-align: center;
+}
+.phone{
+  font-size: 3em;
+}
 .orange{
-  color:orange;
+  background: orange;
+  color: white;
 }
 
 .blue{
 
-  color:blue;
+  background: blue;
+  color: white;
 }
