@@ -1,11 +1,13 @@
 p {
   font-family: "'Montserrat', arial, sans-serif"
   font-size: 2em;
-  margin: 0 auto;
   text-align: center;
 }
-.phone{
+.phone {
   font-size: 3em;
+}
+.name {
+  font-size: 2em;
 }
 .orange{
   background: orange;
@@ -13,7 +15,6 @@ p {
 }
 
 .blue{
-
   background: blue;
   color: white;
 }

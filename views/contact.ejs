@@ -16,11 +16,13 @@ src="//static.twilio.com/libs/twiliojs/1.2/twilio.min.js"></script>
     <div class="pure-u-1" id="title"><p>xTuple Move-Your-Car</p></div>
     <% for(var i = 0; i < contacts.length; i++) { %>
       <% if(contacts[i].phone !== null) {%>
+        <% if(i%2) {%>
       <div class="pure-u-1 orange" id="tap">
+      <% }else {%>
+      <div class="pure-u-1 blue" id="tap">
+      <% } %>
         <p class="name"><%= contacts[i].firstName + " " + contacts[i].lastName %>
-        <br>
         <p class="phone"><%= contacts[i].phone %></p>
-        <hr>
       </div>
       <% } %>
     <% } %>
