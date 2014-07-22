@@ -10,12 +10,12 @@ p {
   font-size: 2em;
 }
 .orange{
-  background: orange;
+  background: #f98530;
   color: white;
 }
 
 .blue{
-  background: blue;
+  background: #2bb5e9;
   color: white;
 }
 #title{
