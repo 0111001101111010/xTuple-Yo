@@ -1,3 +1,23 @@
+$(document).ready(function () {
+    $('.modalLink').modal({
+        trigger: '.modalLink',
+        olay: 'div.overlay',
+        modals: 'div.modal',
+        animationEffect: 'slidedown',
+        animationSpeed: 400,
+        moveModalSpeed: 'fast',
+        background: '00c2ff',
+        opacity: 0.5,
+        openOnLoad: false,
+        docClose: true,
+        closeByEscape: true,
+        moveOnScroll: true,
+        resizeWindow: true,
+        close: '.closeBtn'
+    });
+  $('.modalLink').click();
+});
+
 $( "div" ).click(function() {
   console.log("clicked now waiting");
   var self = this;
