@@ -1,4 +1,6 @@
 var once = true;
+var name;
+var message;
 $(document).ready(function () {
     $('.modalLink').modal({
         trigger: '.modalLink',
@@ -8,7 +10,7 @@ $(document).ready(function () {
         animationSpeed: 400,
         moveModalSpeed: 'fast',
         background: '00c2ff',
-        opacity: 0.5,
+        opacity: 0.2,
         openOnLoad: false,
         docClose: true,
         closeByEscape: true,
@@ -27,7 +29,6 @@ $("div").click(function() {
   var number = $(this).find(".phone").text();
   text(number);
   console.log(number);
-  console.log($(this));
   $(this).addClass('shake shake-horizontal"');
   setTimeout(function(){
     $(self).removeClass('shake shake-horizontal"');
@@ -37,11 +38,13 @@ $("div").click(function() {
 
 $("#myClick").click( function () {
   console.log("clicked");
-  $("#modal").removeClass('modal');
-  $("#modal").attr("hidden",'true');
-  $('#modal').attr("_csrf",'true');
+  var modal = $("#modal");
+  modal.removeClass('modal');
+  modal.attr("hidden",'true');
+  modal.attr("_csrf",'true');
   $("#overlay").removeClass("overlay");
-
+  name = $("#myName").val();
+  message = $("#myMsg").val();
 });
 
 var text = function(number){
@@ -51,7 +54,9 @@ var text = function(number){
   //  dataType: 'jsonp',
     url: 'http://localhost:3000/text',
     data: {
-      "number":number
+      "number": number,
+      "name": name,
+      "message": message
     }
   })
 

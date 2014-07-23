@@ -41,14 +41,18 @@ app.get('/', function (req, res){
 
 app.post('/text', function( req, res){
   //Send an SMS text message
-  console.log(req.body.number);
-  var number = req.body.number;
 
+  var number = req.body.number;
+  var name = req.body.name;
+  var message = req.body.message;
+  console.log(req.body);
+  res.send(req.body);
+  res.send();
   twilio.sendMessage({
 
       to: number, // Any number Twilio can deliver to
       from: '+13476479140', // A number you bought from Twilio and can use for outbound communication
-      body: 'Please Move Your Car'
+      body: 'xTuple-Yo from ' + name + ": " + message,
   }, function(err, responseData) {
       console.log(err);
       if (!err) {
