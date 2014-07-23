@@ -1,3 +1,4 @@
+var once = true;
 $(document).ready(function () {
     $('.modalLink').modal({
         trigger: '.modalLink',
@@ -15,10 +16,12 @@ $(document).ready(function () {
         resizeWindow: true,
         close: '.closeBtn'
     });
-  $('.modalLink').click();
+    if(once){
+      $('.modalLink').click();
+      once = false;
+    }
 });
-
-$( "div" ).click(function() {
+$("div").click(function() {
   console.log("clicked now waiting");
   var self = this;
   var number = $(this).find(".phone").text();
@@ -32,6 +35,14 @@ $( "div" ).click(function() {
 
 });
 
+$("#myClick").click( function () {
+  console.log("clicked");
+  $("#modal").removeClass('modal');
+  $("#modal").attr("hidden",'true');
+  $('#modal').attr("_csrf",'true');
+  $("#overlay").removeClass("overlay");
+
+});
 
 var text = function(number){
   //use jquery to send the request to text number

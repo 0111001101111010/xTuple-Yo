@@ -45,7 +45,7 @@ p {
   cursor: pointer;
 }
 
-a {
+/* a {
   display: block;
   width: 280px;
   height: 50px;
@@ -63,7 +63,7 @@ a {
 }
 a:hover {
   background: #ea5234;
-}
+} */
 
 /* \\\\\\\\\\\\\\\\\    END DEMO CODE   ///////////////////////////////// */
 /* \\\\\\\\\\\\\\\\\    MODAL CODE   ///////////////////////////////// */
